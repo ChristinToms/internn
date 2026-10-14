@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BookNest — Your Next Chapter Starts Here</title>
+  <meta name="description" content="BookNest is a calm, personal reading companion. Organize your books, manage your reading list, and track your reading journey — privately, in your browser." />
+  <meta name="theme-color" content="#F7F5F0" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2329483B'/%3E%3Cpath d='M8 10.5c2.8-1 5.4-.8 8 .9v11.1c-2.6-1.7-5.2-1.9-8-.9zM24 10.5c-2.8-1-5.4-.8-8 .9v11.1c2.6-1.7 5.2-1.9 8-.9z' fill='none' stroke='%23F7F5F0' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#library">Skip to your library</a>
+
+  <!-- ============ Navigation ============ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="BookNest — back to top">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9" fill="#29483B" />
+          <path d="M10 13.2c3.4-1.3 6.7-1 10 1.1v13.4c-3.3-2.1-6.6-2.4-10-1.1z" fill="none" stroke="#F7F5F0" stroke-width="1.7" stroke-linejoin="round" />
+          <path d="M30 13.2c-3.4-1.3-6.7-1-10 1.1v13.4c3.3-2.1 6.6-2.4 10-1.1z" fill="none" stroke="#F7F5F0" stroke-width="1.7" stroke-linejoin="round" />
+          <path d="M24.5 13.6v6.6l1.6-1.2 1.6 1.2v-7.3" fill="#B27C42" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Book<em>Nest</em></span>
+          <span class="brand-tag">Your personal library</span>
+        </span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#library" data-nav="library">My Library</a></li>
+        <li><a class="nav-link" href="#insights" data-nav="insights">Reading Insights</a></li>
+      </ul>
+
+      <button type="button" class="btn btn-primary btn-sm nav-cta" data-action="open-add">
+        <span aria-hidden="true">+</span> Add a Book
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ============ Hero ============ -->
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Your reading journey, organized</p>
+        <h1 class="hero-title" id="hero-title">
+          Every book has a story.
+          <em>Make yours count.</em>
+        </h1>
+        <p class="hero-lede">
+          Your personal space for the books you love, the stories you're exploring, and the chapters still waiting to begin.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#library">
+            Explore My Library
+            <svg class="btn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 4v12m0 0-4.5-4.5M10 16l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <button type="button" class="btn btn-ghost btn-lg" data-action="open-add" id="hero-add">
+            <span aria-hidden="true">+</span> <span id="hero-add-label">Add Your First Book</span>
+          </button>
+        </div>
+        <p class="hero-note" id="hero-note">
+          <span class="hero-note-dot" aria-hidden="true"></span>
+          <span id="hero-note-text">No sign-up needed. Your library lives privately in this browser.</span>
+        </p>
+      </div>
+
+      <!-- Decorative reading-desk composition (CSS + inline SVG only) -->
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-sun"></div>
+        <div class="art-bookmark"></div>
+
+        <div class="art-shelf">
+          <svg class="art-sprig" viewBox="0 0 80 150">
+            <path d="M40 148V58" stroke="#29483B" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <path d="M40 120c-14-3-22-13-24-26 13 1 22 10 24 26z" fill="#A9B9A4"/>
+            <path d="M40 104c13-4 20-14 21-27-12 2-20 11-21 27z" fill="#47765D"/>
+            <path d="M40 86c-12-4-18-13-19-25 11 2 18 10 19 25z" fill="#47765D" opacity=".85"/>
+            <path d="M40 70c10-5 15-14 15-25-10 3-15 11-15 25z" fill="#A9B9A4"/>
+            <path d="M40 58c-3-9-1-17 5-24 3 9 1 17-5 24z" fill="#29483B"/>
+            <path d="M24 148h32l-4-22H28z" fill="#B27C42" opacity=".9"/>
+          </svg>
+          <div class="spine" style="--h:15.5em; --w:2.6em; --c:#29483B;"><span class="spine-title" data-spine="0">Middlemarch</span></div>
+          <div class="spine" style="--h:13em; --w:2.1em; --c:#B27C42;"><span class="spine-title" data-spine="1">Persuasion</span></div>
+          <div class="spine spine--light" style="--h:16.5em; --w:2.9em; --c:#EAE4D8;"><span class="spine-title" data-spine="2">The Odyssey</span></div>
+          <div class="spine" style="--h:14em; --w:2.3em; --c:#47765D;"><span class="spine-title" data-spine="3">Walden</span></div>
+          <div class="spine spine--lean" style="--h:12.5em; --w:2.2em; --c:#7D4E3A;"><span class="spine-title">Poems</span></div>
+          <div class="art-stack">
+            <span style="--sw:6.4em; --c:#A9B9A4;"></span>
+            <span style="--sw:5.6em; --c:#29483B;"></span>
+            <span style="--sw:7em; --c:#EAE4D8;"></span>
+          </div>
+        </div>
+
+        <figure class="art-quote">
+          <blockquote>“I have always imagined that Paradise will be a kind of library.”</blockquote>
+          <figcaption>Jorge Luis Borges</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ Reading overview ============ -->
+    <section class="overview" id="insights" aria-labelledby="overview-title">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Reading insights</p>
+            <h2 class="section-title" id="overview-title">Your reading, <em>at a glance.</em></h2>
+          </div>
+          <p class="section-aside">Calculated from your entire collection and updated the moment anything changes.</p>
+        </div>
+
+        <ul class="stats" role="list">
+          <li class="stat">
+            <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 18.5h16M5.5 15h13M7 11.5h10M5 6h3v9H5zM9.5 4.5h3V15h-3zM14 7l2.8-.8 2.4 8.6-2.8.8z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/></svg>
+            <span class="stat-value" data-stat="total">0</span>
+            <span class="stat-label">Total books</span>
+            <span class="stat-hint">in your collection</span>
+          </li>
+          <li class="stat stat--to-read">
+            <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3.5h10v17l-5-3.8-5 3.8z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span class="stat-value" data-stat="to-read">0</span>
+            <span class="stat-label">To read</span>
+            <span class="stat-hint">waiting to begin</span>
+          </li>
+          <li class="stat stat--reading">
+            <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6.5c3.2-1.4 6.2-1.1 9 .9v12c-2.8-2-5.8-2.3-9-.9zM21 6.5c-3.2-1.4-6.2-1.1-9 .9v12c2.8-2 5.8-2.3 9-.9z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span class="stat-value" data-stat="reading">0</span>
+            <span class="stat-label">Currently reading</span>
+            <span class="stat-hint">stories in progress</span>
+          </li>
+          <li class="stat stat--finished">
+            <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="m8.3 12.2 2.5 2.5 5-5.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="stat-value" data-stat="finished">0</span>
+            <span class="stat-label">Finished</span>
+            <span class="stat-hint">final pages turned</span>
+          </li>
+        </ul>
+
+        <div class="shelf-meter" id="shelf-meter">
+          <div class="meter-bar" id="meter-bar" aria-hidden="true">
+            <span class="meter-seg meter-seg--finished" data-seg="finished"></span>
+            <span class="meter-seg meter-seg--reading" data-seg="reading"></span>
+            <span class="meter-seg meter-seg--to-read" data-seg="to-read"></span>
+          </div>
+          <p class="meter-caption" id="meter-caption">Your shelf balance appears here once you add your first book.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Add a book ============ -->
+    <section class="add-section container" id="add" aria-labelledby="add-title">
+      <div class="add-intro">
+        <p class="eyebrow">New arrival</p>
+        <h2 class="section-title" id="add-title">Add to your <em>collection</em></h2>
+        <p class="section-lede">Every great reading journey starts with a single book.</p>
+        <ul class="add-points" role="list">
+          <li>Saved instantly to this browser</li>
+          <li>Newest additions appear first</li>
+          <li>Change its status anytime</li>
+        </ul>
+      </div>
+
+      <form class="book-form" id="book-form" novalidate>
+        <div class="field">
+          <label class="field-label" for="book-title">Book title</label>
+          <input class="input" id="book-title" name="title" type="text" placeholder="e.g. Aadujeevitham" autocomplete="off" maxlength="200" aria-describedby="title-error" />
+          <p class="field-error" id="title-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="book-author">Author</label>
+          <input class="input" id="book-author" name="author" type="text" placeholder="e.g. Benyamin" autocomplete="off" maxlength="120" aria-describedby="author-error" />
+          <p class="field-error" id="author-error" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="field status-field">
+          <legend class="field-label">Reading status</legend>
+          <div class="segmented">
+            <label class="segment">
+              <input type="radio" name="status" value="to-read" checked />
+              <span><i class="dot dot--to-read" aria-hidden="true"></i>To read</span>
+            </label>
+            <label class="segment">
+              <input type="radio" name="status" value="reading" />
+              <span><i class="dot dot--reading" aria-hidden="true"></i>Reading</span>
+            </label>
+            <label class="segment">
+              <input type="radio" name="status" value="finished" />
+              <span><i class="dot dot--finished" aria-hidden="true"></i>Finished</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Add Book to Library</button>
+        <p class="form-success" id="form-success" aria-hidden="true"></p>
+      </form>
+    </section>
+
+    <!-- ============ Library ============ -->
+    <section class="library" id="library" aria-labelledby="library-title">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">My library</p>
+            <h2 class="section-title" id="library-title" tabindex="-1">Your <em>Library</em></h2>
+            <p class="section-lede">All your stories, gathered in one place.</p>
+          </div>
+          <p class="collection-summary" id="collection-summary" aria-live="polite">0 books</p>
+        </div>
+
+        <div class="toolbar" role="search">
+          <div class="search">
+            <label class="visually-hidden" for="search-input">Search your library by title or author</label>
+            <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.8" cy="8.8" r="5.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <input class="input search-input" id="search-input" type="search" placeholder="Find a title, author, or story..." autocomplete="off" spellcheck="false" />
+            <button type="button" class="search-clear" id="search-clear" aria-label="Clear search" hidden>
+              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m6 6 8 8M14 6l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+
+          <div class="filters" role="group" aria-label="Filter by reading status">
+            <button type="button" class="filter" data-filter="all" aria-pressed="true">All Books <span class="filter-count" data-count="all">0</span></button>
+            <button type="button" class="filter" data-filter="to-read" aria-pressed="false">To Read <span class="filter-count" data-count="to-read">0</span></button>
+            <button type="button" class="filter" data-filter="reading" aria-pressed="false">Reading <span class="filter-count" data-count="reading">0</span></button>
+            <button type="button" class="filter" data-filter="finished" aria-pressed="false">Finished <span class="filter-count" data-count="finished">0</span></button>
+          </div>
+        </div>
+
+        <ul class="book-grid" id="book-grid" role="list" aria-label="Books"></ul>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <div class="empty-art" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <h3 class="empty-title" id="empty-title"></h3>
+          <p class="empty-text" id="empty-text"></p>
+          <button type="button" class="btn btn-primary" id="empty-action"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Book<em>Nest</em></p>
+      <p class="footer-note">Your next chapter starts here. Stored privately in your browser — no account required.</p>
+    </div>
+  </footer>
+
+  <!-- Toast feedback -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Delete confirmation -->
+  <dialog class="dialog" id="confirm-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-text">
+    <form method="dialog" class="dialog-inner">
+      <p class="eyebrow eyebrow--danger">Remove book</p>
+      <h2 class="dialog-title" id="dialog-title">Remove this book?</h2>
+      <p class="dialog-text" id="dialog-text"></p>
+      <div class="dialog-actions">
+        <button type="submit" class="btn btn-ghost" value="cancel" autofocus>Keep it</button>
+        <button type="submit" class="btn btn-danger" value="confirm">Remove book</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
